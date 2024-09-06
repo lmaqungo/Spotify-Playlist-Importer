@@ -1,8 +1,6 @@
 import requests
 import json
 
-
-
 def generate_api_token():
     client_id = "c6336ff57cac46ec8deb5edeab25e9b5"
     client_secret = "143cbfe118744abd8e16b8be07aec477"

@@ -1,5 +1,4 @@
 import os
-import json
 import google_auth_oauthlib.flow
 import googleapiclient.discovery
 import googleapiclient.errors
@@ -11,7 +10,7 @@ scopes = ["https://www.googleapis.com/auth/youtube.readonly",
             "https://www.googleapis.com/auth/youtube",
             "https://www.googleapis.com/auth/youtube.force-ssl"
         ]
-credentials_file = "auth.pickle"
+credentials_file = "auth/auth.pickle"
 
 def load_api():
     # Disable OAuthlib's HTTPS verification when running locally.
@@ -19,7 +18,7 @@ def load_api():
 
     api_service_name = "youtube"
     api_version = "v3"
-    client_secrets_file = "client_secret.json"
+    client_secrets_file = "auth/client_secret.json"
 
     credentials = None
 
